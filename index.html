@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompostFromWaste</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CompostFromWaste</h1>
+        <p>Give your waste a second chance!</p>
+    </header>
+
+    <section class="auth">
+        <div id="auth-options">
+            <button id="show-signup">Sign Up</button>
+            <button id="show-login">Login</button>
+        </div>
+
+        <div id="signup" class="auth-section" style="display: none;">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" required>
+                
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" required>
+                
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <div id="login" class="auth-section" style="display: none;">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+                
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-error" class="error-message" style="display: none;">Incorrect password. Please try again.</p>
+        </div>
+    </section>
+
+    <section class="role-selection" id="role-selection" style="display: none;">
+        <h2>Who are you?</h2>
+        <button id="distributor-btn">Distributor</button>
+        <button id="collector-btn">Collector</button>
+    </section>
+
+    <section class="waste-selection" id="waste-selection" style="display: none;">
+        <h2>Select Waste Type</h2>
+        <form id="waste-form">
+            <label>
+                <input type="radio" name="waste" value="Food Waste" required>
+                Food Waste
+            </label>
+            <label>
+                <input type="radio" name="waste" value="Vegetable Waste">
+                Vegetable Waste
+            </label>
+            <label>
+                <input type="radio" name="waste" value="Other Degradable Waste">
+                Other Degradable Waste
+            </label>
+            <button type="submit">Next</button>
+        </form>
+    </section>
+
+    <section class="distributor-info" id="distributor-info" style="display: none;">
+        <h2>Distributor Information</h2>
+        <form id="distributor-form">
+            <label for="dist-name">Name:</label>
+            <input type="text" id="dist-name" required>
+            
+            <label for="dist-address">Address:</label>
+            <input type="text" id="dist-address" required>
+            
+            <label for="dist-phone">Phone Number:</label>
+            <input type="tel" id="dist-phone" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section class="collector-info" id="collector-info" style="display: none;">
+        <h2>Distributors List</h2>
+        <div id="distributor-list"></div>
+    </section>
+
+    <footer>
+        <p>(Waste) Sharing is Caring</p>
+        <div class="social-links">
+            <a href="#">Like us on Facebook</a>
+            <a href="#">Follow us on Instagram</a>
+        </div>
+        <p>© 2024 CompostFromWaste</p>
+        <p><a href="#">Terms of use</a> | <a href="#">Privacy policy</a> | <a href="#">Contact us</a> | <a href="#">Media kit</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
